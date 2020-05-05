@@ -5,8 +5,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "example" {
-  name     = "My-RG"
-  location = "eastus2"
+  name     = "${var.prefix}-RG"
+  location = var.region
 }
 
 
